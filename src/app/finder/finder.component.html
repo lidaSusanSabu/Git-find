@@ -1,0 +1,17 @@
+<div class="container  finder col-6">
+    <div class="input-group md-form form-sm form-2 pl-0">
+        <input class="form-control   border-dark" type="text" placeholder="Search user in GitHub" [(ngModel)]="userName" aria-label="Search">
+        <div class="input-group-append">
+            <button class="input-group-text lime lighten-2 border-dark" (click)="getUserDetails()" id="basic-text1">
+                <img src="https://img.icons8.com/material/24/000000/search--v1.png"> 
+            </button>
+        </div>
+    </div>
+    <div *ngIf="!loading">
+            <img  src="https://media.giphy.com/media/xTk9ZvMnbIiIew7IpW/giphy.gif" alt="loading gif">
+
+    </div>
+
+    <app-display [profile]="userProfile"></app-display>
+
+</div>

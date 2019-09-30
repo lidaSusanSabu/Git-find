@@ -1,0 +1,23 @@
+<div class="container  finder col-10 mt-4 border-dark">
+    <div *ngIf="profile; else error">
+        
+            <h1>{{profile.name}}</h1>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" [src]=profile.avatar_url alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{profile.login}}</h5>
+                    <p class="card-text">{{profile.bio}}
+                    </p>
+                    <a [href]=profile.html_url class="btn btn-primary">Go to that persons GitHub</a>
+                </div>
+            </div>
+        
+
+
+    </div>
+
+    <!-- <ng-template #error>
+            <h1>No result</h1>
+    </ng-template> -->
+
+</div>
